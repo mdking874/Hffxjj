@@ -106,10 +106,10 @@ const first = numberOfOnePage * page - numberOfOnePage;
     const siu = `╭──────•◈•──────╮\n |        𝗜𝘀𝗹𝗮𝗺𝗶𝗰𝗸 𝗰𝗵𝗮𝘁 𝗯𝗼𝘁 \n |   🄲🄾🄼🄼🄰🄽🄳 🄻🄸🅂🅃       \n╰──────•◈•──────╯`;
 const text = `╭──────•◈•──────╮\n│𝗨𝘀𝗲 ${prefix}help [Name?]\n│𝗨𝘀𝗲 ${prefix}help [Page?]\n│𝗡𝗔𝗠𝗘 𝗢𝗪𝗡𝗘𝗥 : │ MD R A F I  ッ\n│𝗧𝗢𝗧𝗔𝗟 : [${arrayInfo.length}]\n│📛🄿🄰🄶🄴📛 :  [${page}/${Math.ceil(arrayInfo.length/numberOfOnePage)}]\n╰──────•◈•──────╯`; 
     var link = [
-"https://imgur.com/a/Uuyk5GN.jpeg", "https://imgur.com/a/Jn6snxB.jpeg", "https://streamable.com/whud6o.jpeg", "https://i.postimg.cc/rsVZfRCK/lv-7454819664338701629-202504090415570-ezgif-com-optimize..gif",
-"https://imgur.com/a/jwjEx1w.jpeg",
-"https://imgur.com/a/QA9IAsJ.jpeg",
-"https://imgur.com/a/md-rafi-1adVHkk.jpeg",
+"https://postimg.cc/zykbXC1x.jpeg", "https://postimg.cc/zykbXC1x.jpeg", "https://postimg.cc/zykbXC1x.jpeg", "https://i.postimg.cc/rsVZfRCK/lv-7454819664338701629-202504090415570-ezgif-com-optimize..gif",
+"https://postimg.cc/zykbXC1x.jpeg",
+"https://postimg.cc/zykbXC1x.jpeg",
+"https://postimg.cc/zykbXC1x.jpeg",
     ]
      var callback = () => api.sendMessage({ body: siu + "\n\n" + msg  + text, attachment: fs.createReadStream(__dirname + "/cache/loidbutter.jpg")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/loidbutter.jpg"), event.messageID);
     return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname + "/cache/loidbutter.jpg")).on("close", () => callback());
