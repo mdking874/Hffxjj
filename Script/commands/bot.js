@@ -207,6 +207,7 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
     return api.sendMessage(msg, threadID, messageID);
   };
 
-}
+if ((event.body.toLowerCase() == "Call") || (event.body.toLowerCase() == "ex")) {
+     return api.sendMessage("️সবাই কলে জয়েন করেন না হলে গ্রুপ থেকে সোজা কিক দিবো ", threadID);
 
 module.exports.run = function({ api, event, client, __GLOBAL }) { }
