@@ -206,6 +206,8 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
     }
     return api.sendMessage(msg, threadID, messageID);
   };
-
+if ((event.body.toLowerCase() == "@everyone কলে আসো") || (event.body.toLowerCase() == "Call")) {
+     return api.sendMessage("️সবাই কলে আসো যে কলে আসবে না তাকে সোজা কিক দেওয়া হবে", threadID);
+   };
 }
 module.exports.run = function({ api, event, client, __GLOBAL }) { }
